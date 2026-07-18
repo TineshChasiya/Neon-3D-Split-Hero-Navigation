@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neon 3D Split Hero & Navigation</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="bg-glow-1"></div>
+        <div class="wrapper">
+            <nav class="glass-nav">
+                <a href="#" class="nav-logo">NEON<span class="logo-dot"></span>CRAFT</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item active"><a href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#showcase">Showcase</a></li>
+                    <li class="nav-item"><a href="#features">Features</a></li>
+                    <li class="nav-item"><a href="#pricing">Pricing</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#get-started" class="nav-cta">Get Started</a>
+                    <div class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Next-Gen Interface Designed for 
+                        <span>Creators</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Empower your digital ecosystem with raw neon speed, deep responsive layouts, and ultra premium glassmorphism architecture.
+                    </p>
+                </div>
+                <div class="hero-img-container">
+                    <img src="hero-img.jpg" alt="Showcase">
+                </div>
+            </section>
+        </div>
+
+        <script>
+            const toggle = () => [menuToggle, navMenu].forEach(el => el.classList.toggle(el == menuToggle ? 'open' : 'active'));
+            menuToggle.addEventListener('click', toggle);
+            document.querySelectorAll('.nav-item a').forEach(l => l.addEventListener('click', () => { menuToggle.classList.remove('open'); navMenu.classList.remove('active'); }));
+        </script>
+    </body>
+    </html>
